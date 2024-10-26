@@ -35,10 +35,8 @@ This application aims to connect job seekers and employers, simplifying the recr
 - **Endpoint**: `/jobs`
 - **Method**: `POST`
 - **Description**: Allows users to create a new job listing by providing job title, description, and other relevant details.
-```
-```
+## Installation Process
 
-Installation Process
 To set up the Job Portal CRUD Application API on your local machine, follow these steps:
 1. **Clone the Repository**
    ```bash
