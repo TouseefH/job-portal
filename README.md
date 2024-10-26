@@ -35,25 +35,8 @@ This application aims to connect job seekers and employers, simplifying the recr
 - **Endpoint**: `/jobs`
 - **Method**: `POST`
 - **Description**: Allows users to create a new job listing by providing job title, description, and other relevant details.
-
-#### Example Request
-```http
-POST /jobs
-Example Payload
-{
-   "title": "Software Developer",
-   "description": "Looking for an experienced developer with expertise in Python and JavaScript.",
-   "location": "Remote",
-   "salary": "70,000 PKR"
-}
-
-Example Response
-{
-   "title": "Software Developer",
-   "description": "Looking for an experienced developer with expertise in Python and JavaScript.",
-   "location": "Remote",
-}
-
+```
+```
 
 Installation Process
 To set up the Job Portal CRUD Application API on your local machine, follow these steps:
