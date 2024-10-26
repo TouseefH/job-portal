@@ -1,4 +1,4 @@
-# Job Portal CRUD Application API
+# Job-Portal CRUD Application API
 
 ## Table of Contents
 - [Project Overview](#project-overview)
