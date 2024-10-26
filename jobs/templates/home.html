@@ -1,0 +1,220 @@
+<!-- jobs/templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Header styles */
+        .navbar {
+            padding: 15px;
+            background-color: #333;
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff7f50 !important;
+        }
+        .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #ff7f50 !important;
+        }
+        .navbar-toggler {
+            border-color: #ff7f50;
+        }
+        /* Main container */
+        .container-main {
+            padding: 50px 0;
+        }
+        /* Intro Section */
+        .intro-section {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .intro-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .intro-section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        /* Featured Jobs Section */
+        .featured-jobs {
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        .featured-jobs h2 {
+            color: #333;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        /* Team Section */
+        .team-section {
+            background-color: #fff;
+            padding: 40px 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-member {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .team-member h3 {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .team-member p {
+            color: #555;
+            font-size: 1rem;
+        }
+        /* Button styles */
+        .btn-custom {
+            font-size: 1rem;
+            padding: 12px 24px;
+            color: #fff;
+            background-color: #ff7f50;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-custom:hover {
+            background-color: #ff4500;
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #ff7f50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#home">Job Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'job_list' %}">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#meet-our-team">Meet Our Team</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="home" class="container container-main">
+        <!-- Intro Section -->
+        <div class="intro-section">
+            <h1>Welcome to the Job Portal</h1>
+            <p>Discover exciting job opportunities that align with your career goals.</p>
+            <a href="{% url 'job_list' %}" class="btn btn-custom mt-4">Explore Jobs</a>
+        </div>
+
+        <!-- Featured Jobs Section -->
+        <div class="featured-jobs mt-5">
+            <h2>Featured Jobs</h2>
+            <p>Explore some of the top job opportunities available now.</p>
+            <ul class="list-group mt-4">
+                <li class="list-group-item">Software Engineer at Tech Solutions</li>
+                <li class="list-group-item">Data Analyst at Data Insights</li>
+                <li class="list-group-item">Product Manager at Innovate Corp</li>
+                <li class="list-group-item">Marketing Specialist at Bright Media</li>
+            </ul>
+        </div>
+
+        <!-- Team Section -->
+        <div id="meet-our-team" class="team-section mt-5">
+            <h2>Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEmnFCYb-cxKw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1706430345618?e=1735171200&v=beta&t=EjOuUOe3gLbKZrB2eRiYHuMoO1qeuDKRRfHd_Qx3YaE" alt="Touseef Hanif">
+                    <h3>Touseef Hanif</h3>
+                    <p>AI/ML Engineer</p>
+                    <p>Expert in artificial intelligence and machine learning, Touseef brings innovative solutions to the job portal, enhancing user experience through AI-driven insights.</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="https://scontent.fisb1-2.fna.fbcdn.net/v/t39.30808-1/285082861_3143839859189634_3633199866965675691_n.jpg?stp=dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=z-87LLp8mE8Q7kNvgHHk-Wi&_nc_zt=24&_nc_ht=scontent.fisb1-2.fna&_nc_gid=A9M9RLw6IUpbBwOQqLqESN0&oh=00_AYADgFrbNut5Nlf0PMg5hVIagevs8NJpES7bfNsdA9xSDw&oe=6722A0D4" alt="Abdullah Malik">
+                    <h3>Abdullah Malik</h3>
+                    <p>Software Engineer</p>
+                    <p>With extensive experience in software development, Abdullah ensures that the portal’s codebase remains robust, scalable, and user-friendly.</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="https://avatars.githubusercontent.com/u/135417798?v=4" alt="Syed Danyal Raza">
+                    <h3>Syed Danyal Raza</h3>
+                    <p>Cyber Security Specialist</p>
+                    <p>Syed ensures the safety and security of user data on the portal, leveraging advanced cybersecurity measures to build trust and reliability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <p>&copy; 2024 Job Portal. All rights reserved.</p>
+        <p><a href="#home">Back to Top</a></p>
+    </footer>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
