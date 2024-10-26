@@ -73,7 +73,10 @@ To set up the Job Portal CRUD Application API on your local machine, follow thes
     docker build -t mydjangoapp
 2.2 **Run the Application**
     ```bash
+    
     docker run -p 8000:8000 mydjangoapp
+    
 2.3 **Access the application (open your web browser)** 
     ```bash
+    
     http://localhost:8000/.
